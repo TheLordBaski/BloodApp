@@ -2,6 +2,8 @@ const requests = [
     {
         id: 1,
         bloodType: "B+",
+        bloodSubType: "RhdPositiv",
+        fenotype: "C+c-E-e+K-",
         name: "Zdenek Pecinka",
         age: 47,
         gender: "Male",
@@ -12,6 +14,8 @@ const requests = [
     {
         id: 2,
         bloodType: "O-",
+        bloodSubType: "RhdPositiv",
+        fenotype: "C+c-E-e+K-",
         name: "Michala Kovačičová",
         age: 23,
         gender: "Female",
@@ -22,6 +26,8 @@ const requests = [
     {
         id: 3,
         bloodType: "A+",
+        bloodSubType: "RhdPositiv",
+        fenotype: "C+c-E-e+K-",
         name: "Patrik Mrázek",
         age: 6,
         gender: "Male",
