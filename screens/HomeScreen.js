@@ -3,6 +3,7 @@ import {StyleSheet, Image, StatusBar,Button, ScrollView, TouchableOpacity} from 
 import * as theme from "../theme";
 import {Block, Text} from "../components";
 import * as mocks from "../mocks";
+import {Header} from "react-navigation-stack";
 
 class HomeScreen extends React.Component {
 
@@ -133,6 +134,7 @@ class HomeScreen extends React.Component {
             props
         } = this.props;
         return (
+
             <Block style={styles.safe}>
                 {this.renderHeader()}
                 {this.renderRequests()}

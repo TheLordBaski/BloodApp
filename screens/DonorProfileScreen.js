@@ -17,7 +17,7 @@ class DonorProfileScreen extends React.Component {
         const {navigation} = this.props;
         const request = navigation.getParam('request');
         return (
-            <Block style={styles.container}>
+            <Block column style={styles.container}>
                 <Block flex={0.55} row card shadow color="white" style={styles.request}>
                     <Block
                         flex={0.25}
@@ -39,7 +39,7 @@ class DonorProfileScreen extends React.Component {
                     </Block>
                 </Block>
                 <Block flex={3}>
-                    <Block flex={false}>
+                    <Block >
                         <Block flex={1} card center middle style={styles.moreInfo}>
                             <Text h1 bold style={{
                                 textTransform: "uppercase",
@@ -47,17 +47,17 @@ class DonorProfileScreen extends React.Component {
                             }}>{request.priority}</Text>
                         </Block>
                     </Block>
-                    <Block flex={false}>
+                    <Block >
                         <Block flex={1} card center middle style={styles.moreInfo}>
                             <Text h2 semibold>{request.bloodSubType}</Text>
                         </Block>
                     </Block>
-                    <Block flex={false}>
+                    <Block >
                         <Block flex={1} card center middle style={styles.moreInfo}>
-                            <Text h2 semibold>{request.bloodSubType}</Text>
+                            <Text h3 semibold>{request.fenotype}</Text>
                         </Block>
                     </Block>
-                    <Block flex={false}>
+                    <Block >
                         <Block row space="between">
                             <Block card style={styles.moreInfo}>
                                 <Block row flex={1} center middle>
@@ -79,7 +79,52 @@ class DonorProfileScreen extends React.Component {
                                     </Block>
                                 </Block>
                             </Block>
+
                         </Block>
+
+                    </Block>
+
+                    <Block >
+                        <Block row space="between">
+                            <Block card style={styles.moreInfo}>
+                                <Block row flex={1} center middle>
+                                    <Block flex={3} center>
+                                        <Text title bold>Location</Text>
+                                    </Block>
+                                    <Block flex={3} center>
+                                        <Text h3>{request.city}</Text>
+                                    </Block>
+                                </Block>
+                            </Block>
+                            <Block card style={styles.moreInfo}>
+                                <Block row flex={1} center middle>
+                                    <Block flex={3} center>
+                                        <Text title bold>Last update</Text>
+                                    </Block>
+                                    <Block flex={3} center>
+                                        <Text h3>{request.time}</Text>
+                                    </Block>
+                                </Block>
+                            </Block>
+
+                        </Block>
+
+                    </Block>
+                    <Block >
+                        <Block row space="between">
+                            <Block card style={styles.moreInfo}>
+                                <Block row flex={1} center middle>
+                                    <Block flex={3} center>
+                                        <Text title bold>Time added</Text>
+                                    </Block>
+                                    <Block flex={3} center>
+                                        <Text h3>{request.time}</Text>
+                                    </Block>
+                                </Block>
+                            </Block>
+
+                        </Block>
+
                     </Block>
                 </Block>
             </Block>

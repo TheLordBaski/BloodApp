@@ -8,8 +8,10 @@ const requests = [
         age: 47,
         gender: "Male",
         distance: 28,
+        date: "12.1.2020",
         time: "2 hrs",
         priority: "urgent",
+        city: "Trnava",
     },
     {
         id: 2,
@@ -20,8 +22,10 @@ const requests = [
         age: 23,
         gender: "Female",
         distance: 10,
+        date: "12.1.2020",
         time: "22 hrs",
         priority: "urgent",
+        city: "Bratislava",
     },
     {
         id: 3,
@@ -32,8 +36,10 @@ const requests = [
         age: 6,
         gender: "Male",
         distance: 15.3,
-        time: "12.1.2020",
+        date: "12.1.2020",
+        time: "5 hrs",
         priority: "urgent",
+        city: "Senica",
     },
 
 ];
