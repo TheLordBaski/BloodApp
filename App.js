@@ -3,7 +3,7 @@ import {StyleSheet, Image, Text} from 'react-native';
 import * as Font from "expo-font";
 
 import {Block} from "./components";
-import AppNavigator from './navigation/index';
+import AppNavigator from './navigation/AppNavigator';
 
 class App extends React.Component {
     state = {

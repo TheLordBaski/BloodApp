@@ -3,11 +3,11 @@ import {StyleSheet, Image, StatusBar,Button, ScrollView, TouchableOpacity} from 
 import * as theme from "../theme";
 import {Block, Text} from "../components";
 import * as mocks from "../mocks";
-import {Header} from "react-navigation-stack";
 
 class HomeScreen extends React.Component {
-
-
+    static navigationOptions = {
+        header: null,
+    };
     renderHeader() {
         const {user} = this.props;
         return (
@@ -134,7 +134,6 @@ class HomeScreen extends React.Component {
             props
         } = this.props;
         return (
-
             <Block style={styles.safe}>
                 {this.renderHeader()}
                 {this.renderRequests()}
@@ -167,6 +166,9 @@ const styles = StyleSheet.create({
         height: 25,
         borderRadius: 25 / 2,
         marginRight: 5
+    },
+    drawer: {
+        marginLeft: 5
     },
     requests: {
         marginTop: -55,
