@@ -6,7 +6,7 @@ import * as mocks from "../mocks";
 
 class HomeScreen extends React.Component {
     static navigationOptions = {
-        header: null,
+        headerShown: false,
     };
     renderHeader() {
         const {user} = this.props;

@@ -7,6 +7,7 @@ import {TabBarIcon} from "../components";
 import HomeScreen from '../screens/HomeScreen';
 import MapScreen from '../screens/MapScreen';
 import InfoScreen from '../screens/InfoScreen';
+import DonorProfileScreen from "../screens/DonorProfileScreen";
 
 const config = Platform.select({
 
@@ -20,6 +21,7 @@ const config = Platform.select({
 const HomeStack = createStackNavigator(
     {
         Home: HomeScreen,
+        DonorProfile : {screen : DonorProfileScreen}
     },
     config
 );

@@ -3,7 +3,7 @@ import {ExpoConfigView} from '@expo/samples';
 
 export default class InfoScreen extends React.Component {
     static navigationOptions = {
-        header: null,
+        headerShown: false,
     };
 
     render() {

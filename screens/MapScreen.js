@@ -4,7 +4,7 @@ import {Text} from "../components";
 
 export default class MapScreen extends React.Component {
     static navigationOptions = {
-        header: null,
+        headerShown: false,
     };
 
     render() {
