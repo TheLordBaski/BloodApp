@@ -11,7 +11,7 @@ class HomeScreen extends React.Component {
     renderHeader() {
         const {user} = this.props;
         return (
-            <Block flex={0.42} column style={{paddingHorizontal: 15}}>
+            <Block flex={0.32} column style={{paddingHorizontal: 15}}>
                 <Block flex={false} row style={{paddingVertical: 15}}>
                     <Block center>
                         <Text h3 white style={{marginRight: -(25 + 5)}}>
@@ -47,9 +47,6 @@ class HomeScreen extends React.Component {
                         <Text caption light>
                             Requests
                         </Text>
-                    </Block>
-                    <Block>
-                        {this.renderChart()}
                     </Block>
                 </Block>
             </Block>

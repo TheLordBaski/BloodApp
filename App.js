@@ -30,10 +30,9 @@ class App extends React.Component {
             if (!this.state.fontsLoaded) {
                 return (
                     <Block center middle>
-                        <Text>Hello</Text>
                         <Image
                             style={{width: 140, height: 140}}
-                            source={require("./assets/icon.png")}
+                            source={require("./assets/icon_big.png")}
                         />
                     </Block>
                 );

@@ -41,6 +41,20 @@ const requests = [
         priority: "urgent",
         city: "Senica",
     },
+    {
+        id: 3,
+        bloodType: "0+",
+        bloodSubType: "RhdPositiv",
+        fenotype: "C+c-E-e+K-",
+        name: "Filip Einstein",
+        age: 26,
+        gender: "Male",
+        distance: 105.3,
+        date: "10.1.2020",
+        time: "15 days",
+        priority: "urgent",
+        city: "Hlohovec",
+    },
 
 ];
 

@@ -21,13 +21,13 @@ const config = Platform.select({
 const HomeStack = createStackNavigator(
     {
         Home: HomeScreen,
-        DonorProfile : {screen : DonorProfileScreen}
+        DonorProfile: {screen: DonorProfileScreen}
     },
     config
 );
 
 HomeStack.navigationOptions = {
-    tabBarLabel: 'Home',
+    tabBarLabel: 'Domov',
 
     tabBarIcon: ({focused}) => (
         <TabBarIcon
@@ -35,7 +35,7 @@ HomeStack.navigationOptions = {
             name={
                 Platform.OS === 'ios'
                     ? `ios-information-circle${focused ? '' : '-outline'}`
-                    : 'md-information-circle'
+                    : 'md-home'
             }
         />
     ),
@@ -54,16 +54,15 @@ MapStack.navigationOptions = {
     defaultNavigationOptions: {
         headerShown: false,
     },
-    tabBarLabel: 'Links',
+    tabBarLabel: 'Mapa',
     tabBarIcon: ({focused}) => (
-        <TabBarIcon focused={focused} name={Platform.OS === 'ios' ? 'ios-link' : 'md-link'}/>
+        <TabBarIcon focused={focused} name={Platform.OS === 'ios' ? 'ios-link' : 'md-map'}/>
     ),
 };
 
 MapStack.path = '';
 
 const InfoStack = createStackNavigator(
-
     {
         Settings: InfoScreen,
     },
@@ -74,9 +73,10 @@ InfoStack.navigationOptions = {
     defaultNavigationOptions: {
         headerShown: false,
     },
-    tabBarLabel: 'Settings',
+    tabBarLabel: 'Informácie',
     tabBarIcon: ({focused}) => (
-        <TabBarIcon focused={focused} name={Platform.OS === 'ios' ? 'ios-options' : 'md-options'}/>
+        <TabBarIcon focused={focused} name={Platform.OS === 'ios' ? `ios-information-circle${focused ? '' : '-outline'}`
+            : 'md-information-circle'}/>
     ),
 };
 
