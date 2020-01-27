@@ -84,10 +84,34 @@ const user = {
 
 var markers = [
     {
-        latitude: 45.65,
-        longitude: -78.90,
-        title: 'Foo Place',
-        subtitle: '1234 Foo Drive'
+        latitude: 48.6507634,
+        longitude: 17.8360907,
+        title: 'Národná transfúzna služba SR',
+        subtitle: 'Trnava'
+    },
+    {
+        latitude: 48.191144,
+        longitude: 17.1839752,
+        title: 'Národná transfúzna služba SR',
+        subtitle: 'Bratislava Limbová'
+    },
+    {
+        latitude: 48.1971316,
+        longitude: 17.2472589,
+        title: 'Národná transfúzna služba SR',
+        subtitle: 'Bratislava Ružinov'
+    },
+    {
+        latitude: 48.0975637,
+        longitude: 18.0142671,
+        title: 'Národná transfúzna služba SR',
+        subtitle: 'Nové Zámky'
+    },
+    {
+        latitude: 48.6446028,
+        longitude: 18.7271306,
+        title: 'Národná transfúzna služba SR',
+        subtitle: 'Trenčín'
     }
 ];
 
