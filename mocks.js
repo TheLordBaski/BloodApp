@@ -82,4 +82,13 @@ const user = {
     avatar: require('./assets/avatar.jpg')
 };
 
-export { requests, chart, user }
+var markers = [
+    {
+        latitude: 45.65,
+        longitude: -78.90,
+        title: 'Foo Place',
+        subtitle: '1234 Foo Drive'
+    }
+];
+
+export {requests, chart, user, markers}

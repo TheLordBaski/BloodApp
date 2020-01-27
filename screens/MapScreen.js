@@ -2,8 +2,9 @@ import React from 'react';
 import {ScrollView, StyleSheet} from 'react-native';
 import MapView, {PROVIDER_GOOGLE} from 'react-native-maps';
 
-import {Text} from "../components";
+import * as mocks from "../mocks";
 import {Block} from "../components";
+import MapMarker from "react-native-maps/lib/components/MapMarker";
 
 export default class MapScreen extends React.Component {
     static navigationOptions = {
@@ -16,6 +17,7 @@ export default class MapScreen extends React.Component {
                 <MapView
                     provider={PROVIDER_GOOGLE} // remove if not using Google Maps
                     style={styles.map}
+                    annotations={mocks.markers}
                     region={{
                         latitude: 48.6605193,
                         longitude: 19.547017,
@@ -23,6 +25,11 @@ export default class MapScreen extends React.Component {
                         longitudeDelta: 6.75,
                     }}
                 >
+                    <MapMarker
+
+                    >
+
+                    </MapMarker>
                 </MapView>
             </Block>
         );
