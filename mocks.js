@@ -42,7 +42,7 @@ const requests = [
         city: "Senica",
     },
     {
-        id: 3,
+        id: 4,
         bloodType: "0+",
         bloodSubType: "RhdPositiv",
         fenotype: "C+c-E-e+K-",
@@ -58,25 +58,6 @@ const requests = [
 
 ];
 
-const chart = [
-    1.1,
-    3,
-    1.5,
-    2.3,
-    3.2,
-    7,
-    8.2,
-    1.2,
-    2,
-    1.2,
-    8,
-    3.8,
-    5.8,
-    3.9,
-    5.1,
-    0.1,
-    6
-];
 
 const user = {
     avatar: require('./assets/avatar.jpg')
@@ -84,35 +65,45 @@ const user = {
 
 var markers = [
     {
-        latitude: 48.6507634,
-        longitude: 17.8360907,
+        coordinate: {
+            latitude: 48.6507634,
+            longitude: 17.8360907,
+        },
         title: 'Národná transfúzna služba SR',
         subtitle: 'Trnava'
     },
     {
-        latitude: 48.191144,
-        longitude: 17.1839752,
+        coordinate: {
+            latitude: 48.191144,
+            longitude: 17.1839752,
+        },
         title: 'Národná transfúzna služba SR',
         subtitle: 'Bratislava Limbová'
     },
     {
-        latitude: 48.1971316,
-        longitude: 17.2472589,
+        coordinate: {
+            latitude: 48.1971316,
+            longitude: 17.2472589,
+        },
         title: 'Národná transfúzna služba SR',
         subtitle: 'Bratislava Ružinov'
     },
     {
-        latitude: 48.0975637,
-        longitude: 18.0142671,
+        coordinate: {
+            latitude: 48.0975637,
+            longitude: 18.0142671,
+        },
         title: 'Národná transfúzna služba SR',
         subtitle: 'Nové Zámky'
     },
     {
-        latitude: 48.6446028,
-        longitude: 18.7271306,
+        coordinate: {
+            latitude: 48.6446028,
+            longitude: 18.7271306,
+        },
         title: 'Národná transfúzna služba SR',
         subtitle: 'Trenčín'
     }
 ];
 
-export {requests, chart, user, markers}
+export {requests, user, markers}
