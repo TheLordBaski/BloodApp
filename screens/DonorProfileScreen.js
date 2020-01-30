@@ -10,7 +10,6 @@ class DonorProfileScreen extends React.Component {
         },
         headerTintColor: '#fff',
         headerTitleStyle: {
-            fontWeight: 'bold',
             color : "#fff",
         },
 
