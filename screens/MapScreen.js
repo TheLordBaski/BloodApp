@@ -6,6 +6,8 @@ import * as mocks from "../mocks";
 import {Block, Text} from "../components";
 import * as theme from "../theme";
 
+const KML_FILE = 'https://www.google.com/maps/d/u/0/kml?mid=1Ae2OJZ16Ptbuzd2UOr6GHMKZBOJ7HfOp&forcekml=1';
+
 class MapScreen extends React.Component {
     static navigationOptions = {
         headerStyle: {
@@ -18,6 +20,11 @@ class MapScreen extends React.Component {
         },
 
     };
+
+    constructor(props) {
+        super(props);
+        this.onKmlReady = this.onKmlReady.bind(this);
+    }
 
     renderHeader() {
         return (
@@ -33,37 +40,42 @@ class MapScreen extends React.Component {
         );
     }
 
+    onKmlReady() {
+        this.map.fitToElements(true);
+        console.log("Kml loaded");
+    }
+
     render() {
         return (
             <Block style={styles.safe}>
                 {this.renderHeader()}
                 <Block style={styles.container}>
                     <MapView
-                        ref={MapView => (this.MapView = MapView)}
-                        provider={PROVIDER_GOOGLE} // remove if not using Google Maps
+                        ref={ref => {
+                            this.map = ref;
+                        }}
+                        provider={PROVIDER_GOOGLE}
                         style={styles.map}
                         loadingEnabled={true}
                         loadingIndicatorColor={theme.colors.accent}
                         loadingBackgroundColor="#eeeeee"
-                        moveOnMarkerPress={false}
-                        showsUserLocation={true}
-                        showsCompass={true}
-                        annotations={mocks.markers}
                         region={{
                             latitude: 48.6605193,
                             longitude: 19.547017,
                             latitudeDelta: 2.75,
                             longitudeDelta: 2.75,
                         }}
+                        kmlSrc={KML_FILE}
+                        onKmlReady={this.onKmlReady}
                     >
-                        {mocks.markers.map((marker, i) => {
-                            return <Marker
-                                coordinate={marker.coordinate}
-                                title={marker.title}
-                                description={marker.subtitle}
-                                key={i}
-                            />
-                        })}
+                        {/*{mocks.markers.map((marker, i) => {*/}
+                        {/*    return <Marker*/}
+                        {/*        coordinate={marker.coordinate}*/}
+                        {/*        title={marker.title}*/}
+                        {/*        description={marker.subtitle}*/}
+                        {/*        key={i}*/}
+                        {/*    />*/}
+                        {/*})}*/}
                     </MapView>
                 </Block>
             </Block>

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kml xmlns="http://www.opengis.net/kml/2.2">
+  <Document>
+    <name>Plánované odbery krvi</name>
+    <description><![CDATA[Mapa a kalendár plánovaných odberov krvi. <br>Pod červenou značkou nájdete odberné miesta Národnej transfúznej služby SR. <br><br>Pod zelenou značkou nájdete odberné miesta v nemocniciach na hematologicko - transfúznych oddeleniach.<br><br>Pod modrou značkou nájdete výjazdové odbery krvi. Organizuje ich Slovenský Červený kríž zväčša v kultúrnych domoch, na obecných úradoch, vo firmách atď. v rôznych slovenských obciach.<br><br>Pod žltou značkou vidíte odberné miesta, na ktorých sú počas Valentínskej kvapky krvi 2014 dobrovoľníci Slovenského Červeného kríža. V uvedenom čase sa u nich môžete prihlásiť k odberu newslettra pre darcov krvi. ]]></description>
+    <NetworkLink>
+      <name>Plánované odbery krvi</name>
+      <Link>
+        <href><![CDATA[http://www.google.com/maps/d/u/0/kml?forcekml=1&mid=13L61WIqMjqyuUBYE0j8un96y30g]]></href>
+      </Link>
+    </NetworkLink>
+  </Document>
+</kml>
