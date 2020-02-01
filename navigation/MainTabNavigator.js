@@ -7,6 +7,7 @@ import {TabBarIcon} from "../components";
 import HomeScreen from '../screens/HomeScreen';
 import MapScreen from '../screens/MapScreen';
 import InfoScreen from '../screens/InfoScreen';
+import QuestionDetail from '../screens/QuestionDetail';
 import DonorProfileScreen from "../screens/DonorProfileScreen";
 import * as theme from "../theme";
 
@@ -67,6 +68,7 @@ MapStack.path = '';
 const InfoStack = createStackNavigator(
     {
         Info: InfoScreen,
+        QuestionDetail: QuestionDetail
     },
     config
 );

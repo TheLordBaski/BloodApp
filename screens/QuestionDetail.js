@@ -4,7 +4,8 @@ import {Block, Text} from "../components";
 import {Image, StatusBar, StyleSheet, ScrollView, Button} from "react-native";
 import {help} from "../mocks"
 
-class InfoScreen extends React.Component {
+class QuestionDetail extends React.Component {
+
     static navigationOptions = {
         headerStyle: {
             backgroundColor: theme.colors.primary,
@@ -16,6 +17,7 @@ class InfoScreen extends React.Component {
         },
 
     };
+
 
     renderHeader() {
         const {user} = this.props;
@@ -33,18 +35,21 @@ class InfoScreen extends React.Component {
     }
 
     render() {
+        const {navigation} = this.props;
+        const item = navigation.getParam('item');
         return (
             <Block style={styles.safe}>
                 {this.renderHeader()}
                 <Block style={styles.textContainer}>
                     <ScrollView>
-                        {help.map((item, i) => {
+                        {item.questions.map((questionDetail, i) => {
                             return <Block card style={{margin: 5}} key={i}>
-                                <Button
-                                    title={item.title}
-                                    color={theme.colors.primary}
-                                    onPress={() => this.props.navigation.navigate('QuestionDetail', {item: item})}
-                                />
+                                <Text h3 center>
+                                    {questionDetail.question}
+                                </Text>
+                                <Text>
+                                    {questionDetail.answer}
+                                </Text>
                             </Block>
                         })}
                     </ScrollView>
@@ -54,7 +59,7 @@ class InfoScreen extends React.Component {
     }
 }
 
-export default InfoScreen;
+export default QuestionDetail;
 
 const styles = StyleSheet.create({
     safe: {
