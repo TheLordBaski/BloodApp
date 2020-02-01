@@ -18,15 +18,20 @@ class QuestionDetail extends React.Component {
 
     };
 
+    constructor(props) {
+        super(props);
+        this.state = {dict: []}
+    }
 
-    renderHeader() {
+
+    renderHeader(title) {
         const {user} = this.props;
         return (
             <Block flex={0.1} column style={{paddingHorizontal: 15}}>
                 <Block flex={false} row style={{paddingVertical: 15}}>
                     <Block center>
                         <Text h3 white>
-                            Informácie
+                            {title}
                         </Text>
                     </Block>
                 </Block>
@@ -39,18 +44,11 @@ class QuestionDetail extends React.Component {
         const item = navigation.getParam('item');
         return (
             <Block style={styles.safe}>
-                {this.renderHeader()}
+                {this.renderHeader(item.title)}
                 <Block style={styles.textContainer}>
                     <ScrollView>
                         {item.questions.map((questionDetail, i) => {
-                            return <Block card style={{margin: 5}} key={i}>
-                                <Text h3 center>
-                                    {questionDetail.question}
-                                </Text>
-                                <Text>
-                                    {questionDetail.answer}
-                                </Text>
-                            </Block>
+                            return <Question questionDetail index={i}/>
                         })}
                     </ScrollView>
                 </Block>
@@ -60,6 +58,40 @@ class QuestionDetail extends React.Component {
 }
 
 export default QuestionDetail;
+
+class Question extends React.Component {
+
+    state = {
+        toggle: true
+    };
+
+
+    render() {
+        const {
+            index,
+            questionDetail
+        } = this.props;
+
+        return (
+            <Block card style={{margin: 5}} key={index}>
+                <Button
+                    title={questionDetail.question}
+                    onPress={() => {
+                        console.log(this.state.toggle);
+                        this.setState({
+                            toggle: !state.toggle
+                        })
+                    }}
+                />
+                {/*style={this.state.toggle ? {display: 'block'} : {display: 'none'}*/}
+                <Text >
+                    {this.state.toggle && questionDetail.answer}
+                </Text>
+            </Block>
+
+        )
+    }
+}
 
 const styles = StyleSheet.create({
     safe: {
