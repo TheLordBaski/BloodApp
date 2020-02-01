@@ -67,16 +67,8 @@ class MapScreen extends React.Component {
                         }}
                         kmlSrc={KML_FILE}
                         onKmlReady={this.onKmlReady}
-                    >
-                        {/*{mocks.markers.map((marker, i) => {*/}
-                        {/*    return <Marker*/}
-                        {/*        coordinate={marker.coordinate}*/}
-                        {/*        title={marker.title}*/}
-                        {/*        description={marker.subtitle}*/}
-                        {/*        key={i}*/}
-                        {/*    />*/}
-                        {/*})}*/}
-                    </MapView>
+                    />
+
                 </Block>
             </Block>
         );
