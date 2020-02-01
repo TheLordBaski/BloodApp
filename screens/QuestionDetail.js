@@ -48,7 +48,7 @@ class QuestionDetail extends React.Component {
                 <Block style={styles.textContainer}>
                     <ScrollView>
                         {item.questions.map((questionDetail, i) => {
-                            return <Question questionDetail index={i}/>
+                            return <Question questionDetail i/>
                         })}
                     </ScrollView>
                 </Block>
@@ -68,14 +68,14 @@ class Question extends React.Component {
 
     render() {
         const {
-            index,
+            i,
             questionDetail
         } = this.props;
-
+        console.log(questionDetail);
         return (
-            <Block card style={{margin: 5}} key={index}>
+            <Block card style={{margin: 5}} key={i}>
                 <Button
-                    title={questionDetail.question}
+                    title={questionDetail.question + { x}}
                     onPress={() => {
                         console.log(this.state.toggle);
                         this.setState({
@@ -83,10 +83,10 @@ class Question extends React.Component {
                         })
                     }}
                 />
-                {/*style={this.state.toggle ? {display: 'block'} : {display: 'none'}*/}
+                {this.state.toggle &&
                 <Text >
-                    {this.state.toggle && questionDetail.answer}
-                </Text>
+                    {questionDetail.answer}
+                </Text>}
             </Block>
 
         )
